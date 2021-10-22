@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const  bodyParser = require('body-parser');
 const session = require('express-session')
-
+const PORT = process.env.PORT || 9000;
 var cors = require('cors')
 
 // import config
@@ -48,9 +48,7 @@ app.use(function (err, req, res, next) {
 
 
 
-app.listen(8080, function () {
-    var host = server.address().address
-    var port = server.address().port
-    console.log("App listening at  http://localhost:" + port);
-
-});
+app.listen(PORT, () => {
+    console.log(`Listening on http://localhost:${PORT}`);
+  });
+  
