@@ -1,0 +1,27 @@
+{
+  "name": "Backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": " nodemon server.js",
+    "server": "nodemon server.js",
+    "frontend": " npm start --prefix frontend",
+    "dev": "concurrent \"npm run server\"\"npm run frontend\"",
+    "heroku-postbuild": "NPM_CONTIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.0.1",
+    "mongoose": "^5.13.7",
+    "swagger": "^0.0.1"
+  }
+}
